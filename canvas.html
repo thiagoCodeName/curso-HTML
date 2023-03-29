@@ -1,0 +1,47 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+function desenhaQuadrado(x, y, cor){
+	
+	var tela=document.querySelector('canvas');
+	var pincel=tela.getContext('2d');
+
+
+	pincel.fillStyle= cor;
+	pincel.fillRect( x, y, 50, 50);
+	pincel.strokeStyle = 'black';
+	pincel.strokeRect(x, y, 50, 50);
+}
+
+
+var x =0;
+
+while(x < 600){
+
+	
+	desenhaQuadrado(x, 50, 'red');
+	desenhaQuadrado(x, 100, 'yellow');
+	desenhaQuadrado(x, 150, 'blue');
+	desenhaQuadrado(x, 200, 'grey');
+	x = x + 50;
+}	
+	function desenhaTexto(x, y, texto){
+		var tela=document.querySelector('canvas');
+		var pincel=tela.getContext('2d');
+
+		pincel.font='25px Georgia';
+		pincel.fillStyle='black';
+		pincel.fillText(texto, x, y);
+	}
+
+	desenhaTexto(20,80, '1');
+	desenhaTexto(70,80, '2');
+	desenhaTexto(120,80,'3');
+
+
+
+	
+
+
+</script>
